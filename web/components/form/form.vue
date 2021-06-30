@@ -40,14 +40,14 @@ export default{
       this.$refs.observer.reset()
     },
     api_request() {
+      console.log(`/server/change_post?addr=${this.addr.replace(/\u200B/g, "")}`)
       axios.get(`/server/change_post?addr=${this.addr.replace(/\u200B/g, "")}`)
         .then((res) => {
           console.log(res);
-          if (res.data.post !== "no_data" ) {
-            this.post = res.data.post;
-            return { post: res.data.post }
-          }
-
+          // if (res.data.post !== "no_data" ) {
+          this.post = res.data.post;
+          return { post: res.data.post }
+          // }
       }).catch(error => {
           const {
             status,

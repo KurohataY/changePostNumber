@@ -35,11 +35,11 @@ public class MysqlRegistry {
 			p.setPostName(map.get("post_name"));
 			p.setFullAddrName(map.get("full_addr_name"));
 			
-			LOG.info(map.get("post"));
-			LOG.info(map.get("lat"));
-			LOG.info(map.get("lon"));
-			LOG.info(map.get("post_name"));
-			LOG.info(map.get("full_addr_name"));
+//			LOG.info(map.get("post"));
+//			LOG.info(map.get("lat"));
+//			LOG.info(map.get("lon"));
+//			LOG.info(map.get("post_name"));
+//			LOG.info(map.get("full_addr_name"));
 			
 			jdbcTemplate.update("INSERT INTO post_data_list(post, lat, lon, post_addr_name, full_addr_name) Values(?,?,?,?,?)",p.getPost(),p.getLat(),p.getLon(),p.getPostName(), p.getFullAddrName());
 		});

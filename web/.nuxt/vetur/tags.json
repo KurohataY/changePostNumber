@@ -5,11 +5,11 @@
   "VuetifyLogo": {
     "description": "Auto imported from components/VuetifyLogo.vue"
   },
-  "HeaderMain": {
-    "description": "Auto imported from components/header/header_main.vue"
-  },
   "Form": {
     "description": "Auto imported from components/form/form.vue"
+  },
+  "HeaderMain": {
+    "description": "Auto imported from components/header/header_main.vue"
   },
   "LeafletMainMap": {
     "description": "Auto imported from components/leaflet/main_map.vue"

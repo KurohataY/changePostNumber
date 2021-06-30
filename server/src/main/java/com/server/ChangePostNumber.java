@@ -14,9 +14,10 @@ public class ChangePostNumber {
 		List<Map<String, Object>> postData = MysqlRegistry.getPostData();
 
 		for (Map<String, Object> data : postData) {
-			String addr = data.get("full_addr_name").toString();
-			if (searchWord.contains(addr) || searchWord.replace("字", "").replace("大字", "").contains(addr)) {
-				String resultPostNum = data.get("post").toString();
+			
+			String resultPostNum = data.get("post").toString();
+			if (searchWord.contains(resultPostNum) || searchWord.replace("字", "").replace("大字", "").contains(resultPostNum)) {
+				String addr = data.get("full_addr_name").toString();
 				String resultFullNameAddr = addr;
 //				String resultPostName = data.get("post_addr_name").toString();
 				String lat = data.get("lat").toString();
